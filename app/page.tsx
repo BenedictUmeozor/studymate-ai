@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-zinc-100 selection:bg-zinc-800 selection:text-white antialiased flex flex-col w-full">
+    <div className="min-h-screen bg-background text-text-primary selection:bg-card-hover selection:text-white antialiased flex flex-col w-full relative bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(255,255,255,0.03),transparent)]">
       {/* Sticky Top Navigation */}
       <LandingNavbar />
 

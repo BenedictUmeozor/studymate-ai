@@ -28,17 +28,17 @@ export default function FeatureGrid() {
   ];
 
   return (
-    <section id="features" className="w-full py-20 md:py-28 relative border-b border-zinc-900 bg-black">
+    <section id="features" className="w-full py-20 md:py-28 relative border-b border-border bg-section">
       {/* Background radial gradients for section layout depth */}
-      <div className="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(circle_at_30%_20%,rgba(27,27,27,0.1),transparent_40%)] pointer-events-none" />
+      <div className="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.01),transparent_40%)] pointer-events-none" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
-          <span className="text-[11px] font-semibold text-zinc-500 font-mono tracking-wider uppercase">FEATURES</span>
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-2">
+          <span className="text-[11px] font-semibold text-text-muted font-mono tracking-wider uppercase">FEATURES</span>
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-text-primary mt-2">
             Everything you need to study faster.
           </h2>
-          <p className="text-xs sm:text-sm text-zinc-500 font-normal mt-3 max-w-md mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm text-text-secondary font-normal mt-3 max-w-md mx-auto leading-relaxed">
             All the tools required to parse complex materials, verify sources, and test your understanding in a clean, unified workspace.
           </p>
         </div>
@@ -49,21 +49,21 @@ export default function FeatureGrid() {
             return (
               <div
                 key={idx}
-                className="group relative rounded-lg border border-zinc-900 bg-zinc-950 p-6 md:p-8 transition-all duration-300 hover:border-zinc-800 hover:bg-zinc-950/80 hover:-translate-y-[1px]"
+                className="group relative rounded-2xl border border-border bg-card p-6 md:p-8 transition-all duration-300 hover:border-border-strong hover:bg-card-hover hover:-translate-y-[1px] shadow-sm hover:shadow-md"
               >
                 {/* Accent border highlight on group hover */}
-                <div className="absolute inset-x-0 -top-px h-[1px] bg-gradient-to-r from-transparent via-zinc-800 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="absolute inset-x-0 -top-px h-[1px] bg-gradient-to-r from-transparent via-border-strong to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 
                 <div className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded border border-zinc-900 bg-zinc-950 text-zinc-400 transition-colors duration-300 group-hover:border-zinc-700 group-hover:text-white flex-shrink-0">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-background text-text-muted transition-colors duration-300 group-hover:border-border-strong group-hover:text-text-primary flex-shrink-0">
                     <Icon className="h-5 w-5" />
                   </div>
                   
                   <div className="space-y-1.5">
-                    <h3 className="text-sm font-semibold text-white tracking-tight">
+                    <h3 className="text-sm font-semibold text-text-primary tracking-tight">
                       {feature.title}
                     </h3>
-                    <p className="text-xs md:text-[13px] leading-relaxed text-zinc-500 group-hover:text-zinc-400 transition-colors duration-300 font-normal">
+                    <p className="text-xs md:text-[13px] leading-relaxed text-text-muted group-hover:text-text-secondary transition-colors duration-300 font-normal">
                       {feature.description}
                     </p>
                   </div>

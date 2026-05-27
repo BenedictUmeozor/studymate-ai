@@ -32,21 +32,21 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="w-full py-20 md:py-28 relative border-b border-zinc-900 bg-zinc-950/20">
+    <section id="how-it-works" className="w-full py-20 md:py-28 relative border-b border-border bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
-          <span className="text-[11px] font-semibold text-zinc-500 font-mono tracking-wider uppercase">WORKFLOW</span>
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-2">
+          <span className="text-[11px] font-semibold text-text-muted font-mono tracking-wider uppercase">WORKFLOW</span>
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-text-primary mt-2">
             How it works
           </h2>
-          <p className="text-xs sm:text-sm text-zinc-500 font-normal mt-3 max-w-sm mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm text-text-secondary font-normal mt-3 max-w-sm mx-auto leading-relaxed">
             Four simple steps to transition your standard academic documents into a fully collaborative learning workspace.
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto relative">
           {/* Subtle connecting line between steps on large screens */}
-          <div className="hidden lg:block absolute top-[52px] left-[10%] right-[10%] h-[1px] bg-zinc-900 -z-10" />
+          <div className="hidden lg:block absolute top-[52px] left-[10%] right-[10%] h-[1px] bg-border -z-10" />
 
           {steps.map((step, idx) => {
             const Icon = step.icon;
@@ -56,16 +56,16 @@ export default function HowItWorks() {
                 className="group flex flex-col items-center lg:items-start text-center lg:text-left space-y-4"
               >
                 {/* Step Icon Badge */}
-                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-zinc-900 bg-zinc-950 text-zinc-400 transition-all duration-300 group-hover:border-zinc-700 group-hover:text-white group-hover:shadow-md">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-border bg-card text-text-muted transition-all duration-300 group-hover:border-border-strong group-hover:text-text-primary group-hover:bg-card-hover group-hover:shadow-md">
                   <Icon className="h-4.5 w-4.5" />
                 </div>
 
                 <div className="space-y-1">
                   <div className="flex items-center justify-center lg:justify-start gap-2">
-                    <span className="text-[10px] text-zinc-500 font-mono font-medium">{step.num}</span>
-                    <h3 className="text-sm font-semibold text-white tracking-tight">{step.title}</h3>
+                    <span className="text-[10px] text-text-muted font-mono font-medium">{step.num}</span>
+                    <h3 className="text-sm font-semibold text-text-primary tracking-tight">{step.title}</h3>
                   </div>
-                  <p className="text-xs md:text-[13px] leading-relaxed text-zinc-500 group-hover:text-zinc-400 transition-colors duration-300 font-normal max-w-[220px]">
+                  <p className="text-xs md:text-[13px] leading-relaxed text-text-muted group-hover:text-text-secondary transition-colors duration-300 font-normal max-w-[220px]">
                     {step.description}
                   </p>
                 </div>
