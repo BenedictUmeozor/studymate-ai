@@ -1,0 +1,16 @@
+# Dependencies
+node_modules
+dist
+build
+
+# Next.js build outputs
+.next
+out
+
+# Vercel deployments
+.vercel
+
+# Git & environment
+.git
+.env*
+*.local
